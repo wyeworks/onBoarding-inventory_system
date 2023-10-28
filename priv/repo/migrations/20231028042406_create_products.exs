@@ -5,8 +5,9 @@ defmodule InventorySystem.Repo.Migrations.CreateProducts do
     create table(:products) do
       add :name, :string
       add :description, :text
-      add :amount_recived, :integer
+      add :amount_received, :integer
       add :amount_expected, :integer
+      add :reception_id, references(:receptions)
 
       timestamps(type: :utc_datetime)
     end
