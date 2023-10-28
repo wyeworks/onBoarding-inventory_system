@@ -33,6 +33,7 @@ defmodule InventorySystemWeb.ReceptionController do
     end
   end
 
+
   def delete(conn, %{"id" => id}) do
     reception = Receptions.get_reception!(id)
 

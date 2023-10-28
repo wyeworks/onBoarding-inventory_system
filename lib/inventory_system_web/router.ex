@@ -12,6 +12,7 @@ defmodule InventorySystemWeb.Router do
     get "/products/:id", ProductController, :show
     delete "/products/:id", ProductController, :delete
     put "/products/:id", ProductController, :update
+    get "/products/control-product/:id", ProductController, :control_product
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

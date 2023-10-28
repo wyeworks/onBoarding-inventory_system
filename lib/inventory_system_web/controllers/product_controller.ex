@@ -3,6 +3,8 @@ defmodule InventorySystemWeb.ProductController do
 
   alias InventorySystem.Products
   alias InventorySystem.Products.Product
+  alias InventorySystem.Products.Service.ControlProductService
+
 
   action_fallback InventorySystemWeb.FallbackController
 
@@ -23,6 +25,10 @@ defmodule InventorySystemWeb.ProductController do
   def show(conn, %{"id" => id}) do
     product = Products.get_product!(id)
     render(conn, :show, product: product)
+  end
+  def control_product(conn, %{"id" => id}) do
+    ControlProductService.control_product(id)
+    send_resp(conn, :no_content, "")
   end
 
   def update(conn, %{"id" => id, "product" => product_params}) do
