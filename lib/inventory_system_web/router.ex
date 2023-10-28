@@ -7,6 +7,11 @@ defmodule InventorySystemWeb.Router do
 
   scope "/api", InventorySystemWeb do
     pipe_through :api
+    get "/products", ProductController, :index
+    post "/products", ProductController, :create
+    get "/products/:id", ProductController, :show
+    delete "/products/:id", ProductController, :delete
+    put "/products/:id", ProductController, :update
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

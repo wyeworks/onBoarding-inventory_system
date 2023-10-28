@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :inventory_system, InventorySystem.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "newuser",
+  password: "password",
   hostname: "localhost",
   database: "inventory_system_dev",
   stacktrace: true,
