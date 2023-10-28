@@ -5,7 +5,7 @@ defmodule InventorySystem.Products.Product do
   schema "products" do
     field :name, :string
     field :description, :string
-    field :amount_recived, :integer
+    field :amount_received, :integer
     field :amount_expected, :integer
     field :reception_id, :integer
     timestamps(type: :utc_datetime)
@@ -14,7 +14,7 @@ defmodule InventorySystem.Products.Product do
   @doc false
   def changeset(product, attrs) do
     product
-    |> cast(attrs, [:name, :description, :amount_recived, :amount_expected, :reception_id])
-    |> validate_required([:name, :description, :amount_recived, :amount_expected, :reception_id])
+    |> cast(attrs, [:name, :description, :amount_received, :amount_expected, :reception_id])
+    |> validate_required([:name, :description, :amount_received, :amount_expected, :reception_id])
   end
 end

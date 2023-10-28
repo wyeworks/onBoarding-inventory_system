@@ -20,7 +20,7 @@ defmodule InventorySystemWeb.ProductJSON do
       id: product.id,
       name: product.name,
       description: product.description,
-      amount_recived: product.amount_recived,
+      amount_received: product.amount_received,
       amount_expected: product.amount_expected,
       reception_id: product.reception_id
     }

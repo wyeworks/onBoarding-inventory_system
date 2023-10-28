@@ -9,9 +9,9 @@ defmodule InventorySystem.Products.Service.ControlProductService do
 
   defp control_amount(product) do
         cond do
-          product.amount_recived == product.amount_expected ->
+          product.amount_received == product.amount_expected ->
             IO.puts("the product has been controlled successfully")
-            product.amount_recived != product.amount_expected ->
+            product.amount_received != product.amount_expected ->
               IO.puts("the amount has differences")
         end
   end
