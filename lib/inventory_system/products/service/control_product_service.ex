@@ -12,7 +12,7 @@ defmodule InventorySystem.Products.Service.ControlProductService do
           product.amount_received == product.amount_expected ->
             IO.puts("the product has been controlled successfully")
             product.amount_received != product.amount_expected ->
-              IO.puts("the amount has differences")
+            IO.puts("the amount has differences")
         end
   end
 

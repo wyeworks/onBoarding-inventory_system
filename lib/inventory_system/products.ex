@@ -73,6 +73,15 @@ defmodule InventorySystem.Products do
     |> Repo.update()
   end
 
+
+
+  def filter_by_reception_id(reception_id) do
+   query= from(p in Product,
+             where: p.reception_id == ^reception_id,
+             select: p.id)
+      Repo.all(query)
+  end
+
   @doc """
   Deletes a product.
 
